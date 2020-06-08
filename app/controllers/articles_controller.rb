@@ -30,5 +30,11 @@ class ArticlesController < ApplicationController
         @article.update(article_params)
         flash.notice = "Article '#{@article.title}' Updated!"
         redirect_to article_path(@article)
-    end           
+    end
+    def tag_list
+        self.tags.collect do |tag|
+            tag.name
+          end.join(", ")
+    end
+                 
 end
