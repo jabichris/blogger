@@ -1,7 +1,3 @@
-<p>
-<%= f.label :tag_list %><br />
-<%= f.text_field :tag_list %>
-</p>
 <h1>Create a New Article</h1>
 
 <%= form_for(@article) do |f| %>
@@ -17,6 +13,10 @@
     <p>
       <%= f.label :body %><br />
       <%= f.text_area :body %>
+    </p>
+    <p>
+    <%= f.label :tag_list %><br />
+    <%= f.text_field :tag_list %>
     </p>
     <p>
       <%= f.submit %>
